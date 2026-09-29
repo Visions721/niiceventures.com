@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Niice Ventures · We buy good businesses</title>
+<meta name="description" content="Niice Ventures buys profitable, established businesses from owners who care what happens next, and runs them for the long haul.">
+<meta property="og:title" content="Niice Ventures">
+<meta property="og:description" content="We buy good businesses and keep them good.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --black:#111111;
+  --black-2:#1A1A1A;
+  --line:rgba(244,239,228,0.14);
+  --lime:#C8F03C;
+  --cream:#F4EFE4;
+  --muted:#BDB6AE;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Instrument Sans',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--cream);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--lime);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.caret{display:inline-block;fill:var(--lime)}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--lime)}
+h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-0.015em;margin:0;color:var(--cream)}
+h2{font-size:clamp(34px,4.6vw,52px);line-height:1.08}
+h3{font-size:24px;font-weight:400;line-height:1.2}
+p{margin:0}
+section{padding:112px 0;border-top:1px solid var(--line)}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:620px}
+
+/* wordmark */
+.wordmark{display:inline-flex;flex-direction:column;align-items:flex-start;color:var(--cream);text-decoration:none}
+.wordmark:hover{text-decoration:none}
+.wm-word{font-family:var(--serif);font-weight:300;line-height:1;letter-spacing:-0.01em}
+.wm-i{position:relative;display:inline-block}
+.wm-i svg{position:absolute;left:50%;top:.1em;width:.21em;height:.14em;transform:translateX(-50%)}
+.wm-sub{font-size:.12em;font-weight:500;letter-spacing:.6em;text-transform:uppercase;color:var(--lime);margin-top:.12em;font-family:var(--sans)}
+
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(17,17,17,0.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav .wordmark{font-size:34px}
+.nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;align-items:center}
+.nav ul a{color:var(--cream);font-size:15px}
+.nav ul a:hover{color:var(--lime);text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;font-size:15px;letter-spacing:.01em;border:1px solid var(--lime);transition:background .15s,color .15s}
+.btn-primary{background:var(--lime);color:var(--black)}
+.btn-primary:hover{background:#D8F76A;text-decoration:none}
+.btn-ghost{color:var(--cream);border-color:rgba(244,239,228,.35)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime);text-decoration:none}
+.nav .btn{min-height:44px;padding:0 20px}
+
+/* hero */
+.hero{padding:120px 0 128px;border-top:0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(46px,7vw,92px);line-height:1.02;margin:22px 0 28px}
+.hero .lead{margin-bottom:40px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.stack{display:flex;flex-direction:column;align-items:center;gap:14px;justify-self:center}
+.stack svg{width:clamp(120px,15vw,190px);height:auto;fill:var(--lime)}
+.stack svg:nth-child(2){opacity:.5}
+.stack svg:nth-child(3){opacity:.22}
+.tagline{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--muted);font-size:17px;margin-top:22px}
+
+/* cards */
+.head{display:flex;flex-direction:column;gap:18px;margin-bottom:56px;max-width:760px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card{border:1px solid var(--line);border-radius:14px;padding:32px;background:var(--black-2);display:flex;flex-direction:column;gap:14px}
+.card p{color:var(--muted)}
+.card .caret{width:22px;height:15px}
+
+/* criteria */
+.criteria{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:64px;align-items:start}
+.checks{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.checks li{display:flex;gap:18px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line);font-size:19px}
+.checks li svg{flex:none;width:16px;height:11px;fill:var(--lime);transform:translateY(-2px)}
+.note{margin-top:24px;color:var(--muted)}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;counter-reset:step}
+.steps li{border-top:2px solid var(--lime);padding-top:22px;display:flex;flex-direction:column;gap:10px}
+.steps .num{font-family:var(--serif);font-size:15px;color:var(--lime)}
+.steps h3{font-size:21px}
+.steps p{color:var(--muted);font-size:15px}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.person{border:1px solid var(--line);border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:12px}
+.person h3{font-size:32px;font-weight:300}
+.person .role{font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--lime)}
+.person p{color:var(--muted)}
+.person a{font-size:15px;margin-top:6px}
+
+/* brokers + contact */
+.band{background:var(--lime);color:var(--black);border-radius:20px;padding:64px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:center}
+.band h2{color:var(--black)}
+.band p{color:#2A2E1A;margin-top:14px;font-size:18px}
+.band .btn{background:var(--black);color:var(--lime);border-color:var(--black);justify-self:start}
+.band .btn:hover{background:#262626;text-decoration:none}
+
+.contact{text-align:center}
+.contact h2{font-size:clamp(40px,6vw,72px);margin:20px 0 20px}
+.contact .lead{margin:0 auto 40px}
+.contact .cta-row{justify-content:center}
+.contact-lines{margin-top:40px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;color:var(--muted);font-size:16px}
+.contact-lines a{color:var(--cream)}
+
+footer{border-top:1px solid var(--line);padding:40px 0 56px}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.foot .wordmark{font-size:44px}
+.foot small{color:var(--muted);font-size:14px}
+
+@media (max-width:900px){
+  .nav ul li:not(:last-child){display:none}
+  .hero{padding:72px 0 88px}
+  .hero-grid,.criteria,.band{grid-template-columns:minmax(0,1fr)}
+  .stack{display:none}
+  .grid-3,.team{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:minmax(0,1fr);gap:28px}
+  section{padding:80px 0}
+  .band{padding:40px 28px}
+  .criteria{gap:36px}
+}
+@media (max-width:420px){
+  .wrap{padding:0 16px}
+  .nav .wordmark{font-size:28px}
+  .nav .btn{padding:0 16px;font-size:14px}
+  .card,.person{padding:26px}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="c" viewBox="0 0 24 16"><polygon points="0,12 12,0 24,12 20,16 12,8 4,16"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="#top" aria-label="Niice Ventures home">
+      <span class="wm-word">n<span class="wm-i">ı<svg class="caret" aria-hidden="true"><use href="#c"/></svg></span><span class="wm-i">ı<svg class="caret" aria-hidden="true"><use href="#c"/></svg></span>ce</span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#criteria">What we buy</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a class="btn btn-primary" href="#contact">Talk to us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Niice Ventures · Business acquisition</div>
+        <h1>We buy good businesses and keep them good.</h1>
+        <p class="lead">Thinking about selling? We&rsquo;re operators, not a fund. We buy profitable companies from owners who care what happens next, then run them for the long haul.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:punit@niiceventures.com?subject=Selling%20my%20business">Start a confidential conversation</a>
+          <a class="btn btn-ghost" href="#criteria">What we look for</a>
+        </div>
+        <p class="tagline">Nice people. Real growth.</p>
+      </div>
+      <div class="stack" aria-hidden="true">
+        <svg viewBox="0 0 24 16"><use href="#c"/></svg>
+        <svg viewBox="0 0 24 16"><use href="#c"/></svg>
+        <svg viewBox="0 0 24 16"><use href="#c"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Why owners talk to us</div>
+        <h2>You built something real. We want to keep it that way.</h2>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <svg class="caret" viewBox="0 0 24 16" aria-hidden="true"><use href="#c"/></svg>
+          <h3>Operators at the table</h3>
+          <p>We&rsquo;ve built and run companies ourselves. Punit co-founded EZ Texting and helped grow it past 230,000 customers to a successful exit.</p>
+        </article>
+        <article class="card">
+          <svg class="caret" viewBox="0 0 24 16" aria-hidden="true"><use href="#c"/></svg>
+          <h3>Your people come first</h3>
+          <p>Your brand stays your brand. We keep the team and the customer relationships that made the business work, then invest to grow it.</p>
+        </article>
+        <article class="card">
+          <svg class="caret" viewBox="0 0 24 16" aria-hidden="true"><use href="#c"/></svg>
+          <h3>Clear, fair offers</h3>
+          <p>You get a straightforward letter of intent and honest answers the whole way through, at a pace that works for you and the business.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="criteria">
+    <div class="wrap criteria">
+      <div class="head" style="margin-bottom:0">
+        <div class="eyebrow">What we buy</div>
+        <h2>Established businesses with a track record.</h2>
+        <p class="lead">We look for companies that already work. Our job is to take them to the next level without breaking what got them here.</p>
+      </div>
+      <div>
+        <ul class="checks">
+          <li><svg aria-hidden="true" viewBox="0 0 24 16"><use href="#c"/></svg>Profitable and cash-flowing, with years of history</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 16"><use href="#c"/></svg>Service businesses with repeat customers, including marketing agencies and B2B services</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 16"><use href="#c"/></svg>A reputation built over years, not months</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 16"><use href="#c"/></svg>An owner ready for the next chapter: retiring, stepping back, or handing off the day-to-day</li>
+        </ul>
+        <p class="note">Not sure you fit? Reach out anyway. Every conversation is confidential.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">How it works</div>
+        <h2>A simple path from first call to handoff.</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="num">01</span><h3>Intro call</h3><p>A confidential conversation about your business and what you want out of a sale.</p></li>
+        <li><span class="num">02</span><h3>NDA &amp; review</h3><p>We sign an NDA and go through the numbers together.</p></li>
+        <li><span class="num">03</span><h3>Letter of intent</h3><p>A clear offer with price, structure and timeline in writing.</p></li>
+        <li><span class="num">04</span><h3>Diligence &amp; close</h3><p>We work through the details with you and your advisors, then close.</p></li>
+        <li><span class="num">05</span><h3>Transition</h3><p>We plan the handoff with you so employees and customers are taken care of.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Team</div>
+        <h2>Who you&rsquo;ll work with.</h2>
+      </div>
+      <div class="team">
+        <article class="person">
+          <div class="role">CEO</div>
+          <h3>Punit Shah</h3>
+          <p>Co-founder of EZ Texting, where he spent about 20 years in roles from CIO and CPO to Chief Data Scientist and CMO. He helped raise more than $50M in venture capital and scale the company to 230,000+ customers through a successful exit. Harvard (IT master&rsquo;s), UC Irvine, Forbes Technology Council.</p>
+          <a href="https://www.linkedin.com/in/punits" rel="noopener">linkedin.com/in/punits</a>
+        </article>
+        <article class="person">
+          <div class="role">General Manager</div>
+          <h3>Karin Odell</h3>
+          <p>Karin leads operations for the businesses we acquire, from the first week of the transition onward.</p>
+          <a href="https://www.linkedin.com/in/karinleeodell" rel="noopener">linkedin.com/in/karinleeodell</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Brokers and advisors</h2>
+          <p>We&rsquo;re actively reviewing opportunities. Send us your listings and CIMs.</p>
+        </div>
+        <a class="btn" href="mailto:punit@niiceventures.com?subject=Deal%20opportunity">Send a deal</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="eyebrow">Contact</div>
+      <h2>Let&rsquo;s talk about what&rsquo;s next.</h2>
+      <p class="lead">No pressure and no obligation. Tell us a little about your business and we&rsquo;ll set up a confidential call.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:punit@niiceventures.com?subject=Selling%20my%20business">Email Punit</a>
+        <a class="btn btn-ghost" href="tel:+17149287651">Call 714 · 928 · 7651</a>
+      </div>
+      <div class="contact-lines">
+        <a href="mailto:punit@niiceventures.com">punit@niiceventures.com</a>
+        <a href="tel:+17149287651">(714) 928-7651</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="wordmark" href="#top" aria-label="Niice Ventures home">
+      <span class="wm-word">n<span class="wm-i">ı<svg class="caret" aria-hidden="true"><use href="#c"/></svg></span><span class="wm-i">ı<svg class="caret" aria-hidden="true"><use href="#c"/></svg></span>ce</span>
+      <span class="wm-sub">Ventures</span>
+    </a>
+    <small>&copy; 2026 Niice Ventures &middot; Nice people. Real growth.</small>
+  </div>
+</footer>
+
+</body>
+</html>
