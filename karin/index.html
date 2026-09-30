@@ -58,13 +58,45 @@ footer a{color:var(--cream)}
 .btn img.av{flex:none;width:52px;height:52px;border-radius:50%;margin-left:-6px}
 .bio{margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
 .bio p{margin:12px 0 0;color:var(--muted);font-size:17px;line-height:1.65}
+
+/* site navigation (shared) */
+header.site-header{position:sticky;top:0;z-index:20;padding:0;background:rgba(17,17,17,0.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(244,239,228,0.14)}
+.sn{max-width:1160px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+header.site-header .wordmark{font-size:34px;flex-direction:row;text-decoration:none}
+.sn-right{display:flex;align-items:center;gap:28px}
+.sn-links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.sn-links a{color:#F4EFE4;font-size:15px;text-decoration:none}
+.sn-links a:hover,.sn-links a[aria-current]{color:#C8F03C}
+.sn-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:#C8F03C;color:#111111;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
+.sn-cta:hover{background:#D8F76A;text-decoration:none}
+.sn-menu{display:none;position:relative}
+.sn-menu summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(244,239,228,0.25);border-radius:12px;color:#F4EFE4}
+.sn-menu summary::-webkit-details-marker{display:none}
+.sn-menu summary svg{width:20px;height:20px;stroke:currentColor;stroke-width:2;stroke-linecap:round;fill:none}
+.sn-menu[open] summary{border-color:#C8F03C;color:#C8F03C}
+.sn-panel{position:absolute;right:0;top:54px;min-width:230px;background:#1A1A1A;border:1px solid rgba(244,239,228,0.14);border-radius:14px;padding:8px;display:flex;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.sn-panel a{padding:14px 16px;border-radius:10px;color:#F4EFE4;font-size:17px;text-decoration:none}
+.sn-panel a:hover{background:rgba(244,239,228,0.06)}
+@media (max-width:900px){.sn-links{display:none}.sn-menu{display:block}.sn-right{gap:10px}}
+@media (max-width:420px){.sn{padding:0 16px}header.site-header .wordmark{font-size:28px}.sn-cta{padding:0 16px;font-size:14px}}
+section[id]{scroll-margin-top:84px}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="c" viewBox="0 0 24 16"><polygon points="0,12 12,0 24,12 20,16 12,8 4,16"/></symbol></svg>
-<header><div class="wrap">
-<a class="wordmark" href="/" aria-label="Niice Ventures home"><span class="wm-word">n<span class="wm-i">ı<svg aria-hidden="true"><use href="#c"/></svg></span><span class="wm-i">ı<svg aria-hidden="true"><use href="#c"/></svg></span>ce</span><span class="wm-sub">Ventures</span></a>
-</div></header>
+<header class="site-header">
+  <div class="sn">
+    <a class="wordmark" href="/" aria-label="Niice Ventures home"><span class="wm-word">n<span class="wm-i">ı<svg class="caret" aria-hidden="true"><use href="#c"/></svg></span><span class="wm-i">ı<svg class="caret" aria-hidden="true"><use href="#c"/></svg></span>ce</span></a>
+    <div class="sn-right">
+      <nav aria-label="Main"><ul class="sn-links"><li><a href="/#approach">Approach</a></li><li><a href="/#criteria">What we buy</a></li><li><a href="/#process">Process</a></li><li><a href="/#team">Team</a></li></ul></nav>
+      <a class="sn-cta" href="/contact/">Talk to us</a>
+      <details class="sn-menu">
+        <summary aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <nav class="sn-panel" aria-label="Menu"><a href="/#approach">Approach</a><a href="/#criteria">What we buy</a><a href="/#process">Process</a><a href="/#team">Team</a><a href="/contact/">Contact</a></nav>
+      </details>
+    </div>
+  </div>
+</header>
 <main><div class="wrap">
 <img class="photo" src="/img/karin.webp" alt="Karin Odell" width="120" height="120">
 <div class="eyebrow">General Manager</div>
