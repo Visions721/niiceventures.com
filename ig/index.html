@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn the Business Game · Niice Ventures</title>
+<meta name="description" content="Grow, buy, or sell a business. Learn the business game with Punit Shah and Niice Ventures.">
+<link rel="canonical" href="https://www.niiceventures.com/ig/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Niice Ventures">
+<meta property="og:title" content="Learn the Business Game.">
+<meta property="og:description" content="Grow, buy, or sell a business. Build lasting wealth in the age of AI.">
+<meta property="og:url" content="https://www.niiceventures.com/ig/">
+<meta property="og:image" content="https://www.niiceventures.com/og/home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn the Business Game.">
+<meta name="twitter:description" content="Grow, buy, or sell a business. Build lasting wealth in the age of AI.">
+<meta name="twitter:image" content="https://www.niiceventures.com/og/home.png">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--black:#111111;--black-2:#1A1A1A;--line:rgba(244,239,228,0.14);--lime:#C8F03C;--cream:#F4EFE4;--muted:#BDB6AE;--serif:'Fraunces',Georgia,serif;--sans:'Instrument Sans',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--black);color:var(--cream);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--lime);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-0.015em;margin:0;color:var(--cream)}
+p{margin:0}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+.caret{display:inline-block;fill:var(--lime)}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--lime)}
+.lead{font-size:clamp(17px,2.4vw,19px);color:var(--muted)}
+
+/* header */
+header{border-bottom:1px solid var(--line)}
+.hd{max-width:640px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.wordmark{display:inline-flex;color:var(--cream);font-size:30px;text-decoration:none}
+.wordmark:hover{text-decoration:none}
+.wm-word{font-family:var(--serif);font-weight:300;line-height:1;letter-spacing:-0.01em}
+.wm-i{position:relative;display:inline-block}
+.wm-i svg{position:absolute;left:50%;top:.21em;width:.21em;height:.14em;transform:translateX(-50%)}
+.hd small{font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+
+/* steps */
+.step{display:none;padding:56px 0 72px;animation:in .25s ease}
+.step.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.step{animation:none}}
+
+.intro h1{font-size:clamp(42px,9vw,64px);line-height:1.02;margin:18px 0 18px}
+.intro h1 em{font-style:normal;color:var(--lime)}
+.stats{display:flex;gap:28px;margin:28px 0 0;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column}
+.stats b{font-family:var(--serif);font-weight:300;font-size:28px;line-height:1.1;color:var(--cream)}
+.stats span{font-size:13px;color:var(--muted)}
+
+.q{margin-top:44px}
+.q h2{font-size:clamp(26px,5vw,32px);line-height:1.15;margin-bottom:22px}
+.choices{display:grid;gap:12px}
+.choice{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:18px;width:100%;padding:20px 22px;border:1px solid var(--line);border-radius:14px;background:var(--black-2);transition:border-color .15s,transform .15s}
+.choice:hover{border-color:var(--lime);transform:translateY(-1px)}
+.choice:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.choice .n{font-family:var(--serif);color:var(--lime);font-size:15px;width:22px;flex:none}
+.choice .t{display:block;font-weight:600;font-size:18px;color:var(--cream)}
+.choice .s{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.choice svg.go{margin-left:auto;flex:none;width:12px;height:18px;stroke:var(--lime);stroke-width:2;fill:none}
+
+/* path pages */
+.back{all:unset;cursor:pointer;font-size:14px;color:var(--muted);display:inline-flex;gap:8px;align-items:center;margin-bottom:28px}
+.back:hover{color:var(--lime)}
+.path h1{font-size:clamp(38px,8vw,56px);line-height:1.04;margin:16px 0 18px}
+.list{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--line)}
+.list li{display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+.list li svg{flex:none;width:14px;height:10px;fill:var(--lime);transform:translateY(-1px)}
+.list b{font-weight:600;color:var(--cream)}
+.list span{color:var(--muted)}
+.ctas{display:grid;gap:12px;margin-top:36px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;border-radius:999px;font-weight:600;font-size:16px;border:1px solid var(--lime);text-align:center}
+.btn-primary{background:var(--lime);color:var(--black)}
+.btn-primary:hover{background:#D8F76A;text-decoration:none}
+.btn-ghost{color:var(--cream);border-color:rgba(244,239,228,.35)}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime);text-decoration:none}
+.btn small{font-weight:500;opacity:.7;margin-left:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.fine{margin-top:18px;font-size:14px;color:var(--muted);text-align:center}
+
+.who{display:flex;gap:16px;align-items:center;margin-top:44px;padding:22px;border:1px solid var(--line);border-radius:14px}
+.who img{width:56px;height:56px;border-radius:50%;flex:none}
+.who p{font-size:14px;color:var(--muted);line-height:1.5}
+.who b{display:block;color:var(--cream);font-weight:600;font-size:15px}
+
+.more{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;font-size:14px}
+
+footer{border-top:1px solid var(--line);padding:28px 0 44px;color:var(--muted);font-size:13px;text-align:center;line-height:1.7}
+footer a{color:var(--cream)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="c" viewBox="0 0 24 16"><polygon points="0,12 12,0 24,12 20,16 12,8 4,16"/></symbol>
+</svg>
+
+<header>
+  <div class="hd">
+    <a class="wordmark" href="/" aria-label="Niice Ventures home"><span class="wm-word">n<span class="wm-i">ı<svg class="caret" aria-hidden="true"><use href="#c"/></svg></span><span class="wm-i">ı<svg class="caret" aria-hidden="true"><use href="#c"/></svg></span>ce</span></a>
+    <small>Punit Shah</small>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- STEP 1: the question -->
+  <section class="step intro on" id="step-start" aria-labelledby="h-start">
+    <div class="eyebrow">Learn the Business Game</div>
+    <h1 id="h-start">Grow. Buy. Sell.<br><em>Build lasting wealth.</em></h1>
+    <p class="lead">I build, buy, and grow businesses, and share the real deals, real numbers, and lessons along the way. Tell me where you are and I&rsquo;ll point you to the right next step.</p>
+    <div class="stats" aria-label="Track record">
+      <div><b>$50M+</b><span>Capital raised</span></div>
+      <div><b>250K+</b><span>Customers served</span></div>
+      <div><b>8</b><span>Companies built</span></div>
+    </div>
+
+    <div class="q">
+      <h2>Are you looking to grow your existing business, buy a new business, or sell your business?</h2>
+      <div class="choices" role="list">
+        <button class="choice" data-go="grow" role="listitem">
+          <span class="n">01</span><span><span class="t">Grow my business</span><span class="s">More customers, better systems, a stronger team</span></span>
+          <svg class="go" viewBox="0 0 12 18" aria-hidden="true"><path d="M3 3l6 6-6 6"/></svg>
+        </button>
+        <button class="choice" data-go="buy" role="listitem">
+          <span class="n">02</span><span><span class="t">Buy a business</span><span class="s">Find, evaluate, and close the right deal</span></span>
+          <svg class="go" viewBox="0 0 12 18" aria-hidden="true"><path d="M3 3l6 6-6 6"/></svg>
+        </button>
+        <button class="choice" data-go="sell" role="listitem">
+          <span class="n">03</span><span><span class="t">Sell my business</span><span class="s">A confidential conversation about your exit</span></span>
+          <svg class="go" viewBox="0 0 12 18" aria-hidden="true"><path d="M3 3l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2a: GROW -->
+  <section class="step path" id="step-grow" aria-labelledby="h-grow">
+    <button class="back" data-go="start">&larr; Change my answer</button>
+    <div class="eyebrow">Grow</div>
+    <h1 id="h-grow">Grow what you&rsquo;ve built.</h1>
+    <p class="lead">I&rsquo;ve co-founded, built, and scaled companies over two decades, serving as CMO, CPO, CIO, and Chief Data Scientist along the way. Bring me where you&rsquo;re stuck and we&rsquo;ll work out your next move.</p>
+    <ul class="list">
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>Growth and marketing.</b> Where your next customers come from, and what to stop spending on.</span></li>
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>Systems and technology.</b> Using data and AI to run leaner without breaking what works.</span></li>
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>Team and culture.</b> Building a business that runs without you in every seat.</span></li>
+    </ul>
+    <div class="ctas">
+      <a class="btn btn-primary" data-cta="grow-call" href="https://calendly.com/contactpunit/30min?utm_source=instagram&amp;utm_medium=social&amp;utm_campaign=ig_funnel&amp;utm_content=grow">Book a 30-minute call</a>
+      <a class="btn btn-ghost" data-cta="grow-contact" href="/contact/">Get in touch</a>
+    </div>
+    <p class="fine">Growing, buying, or selling a business? Let&rsquo;s talk.</p>
+  </section>
+
+  <!-- STEP 2b: BUY -->
+  <section class="step path" id="step-buy" aria-labelledby="h-buy">
+    <button class="back" data-go="start">&larr; Change my answer</button>
+    <div class="eyebrow">Buy</div>
+    <h1 id="h-buy">Buy the right business.</h1>
+    <p class="lead">Buying a business? I&rsquo;ve been involved in eight acquisitions and I&rsquo;m buying businesses now. Learn what I look for before you sign anything.</p>
+    <ul class="list">
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>Pick the right kind of business.</b> Which industries hold up in the age of AI, and which don&rsquo;t.</span></li>
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>Read the numbers.</b> Price, terms, and what the CIM isn&rsquo;t telling you.</span></li>
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>Know when to walk away.</b> Real deals, real numbers, and the red flags that matter.</span></li>
+    </ul>
+    <div class="ctas">
+      <a class="btn btn-primary" data-cta="buy-call" href="https://calendly.com/contactpunit/30min?utm_source=instagram&amp;utm_medium=social&amp;utm_campaign=ig_funnel&amp;utm_content=buy">Book a 30-minute call</a>
+      <a class="btn btn-ghost" data-cta="buy-review" href="mailto:contactpunit@gmail.com?subject=Deal%20review%20waitlist&amp;body=I%27d%20like%20my%20deal%20reviewed%20when%20it%20opens.%0A%0AWhat%20I%27m%20looking%20at%20(industry%2C%20asking%20price%2C%20revenue%2C%20SDE)%3A%0A">Get a deal reviewed<small>Soon</small></a>
+    </div>
+    <p class="fine">Deal reviews are coming soon: send me a deal, AI does the analysis, and I review every one and make the call. Email to get on the list.</p>
+  </section>
+
+  <!-- STEP 2c: SELL -->
+  <section class="step path" id="step-sell" aria-labelledby="h-sell">
+    <button class="back" data-go="start">&larr; Change my answer</button>
+    <div class="eyebrow">Sell</div>
+    <h1 id="h-sell">You deserve a nice exit.</h1>
+    <p class="lead">Thinking about selling? Niice Ventures buys profitable, established businesses. We keep the team and the customer relationships that made the business work, then invest to grow it.</p>
+    <ul class="list">
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>Profitable and cash-flowing,</b> <span>with years of history</span></span></li>
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>Service businesses with repeat customers,</b> <span>including marketing agencies and B2B services</span></span></li>
+      <li><svg aria-hidden="true"><use href="#c"/></svg><span><b>An owner ready for the next chapter:</b> <span>retiring, stepping back, or handing off the day-to-day</span></span></li>
+    </ul>
+    <div class="ctas">
+      <a class="btn btn-primary" data-cta="sell-call" href="https://calendly.com/contactpunit/30min?utm_source=instagram&amp;utm_medium=social&amp;utm_campaign=ig_funnel&amp;utm_content=sell">Start a confidential conversation</a>
+      <a class="btn btn-ghost" data-cta="sell-contact" href="/contact/">Talk to us</a>
+    </div>
+    <p class="fine">Not sure you fit? Reach out anyway. Every conversation is confidential. <a href="/#process">See how it works &rarr;</a></p>
+    <p class="fine">Broker or advisor? <a href="/contact/">Send us your listings and CIMs.</a></p>
+  </section>
+
+  <div class="who">
+    <img src="/img/punit.webp" alt="" width="56" height="56">
+    <p><b>Punit Shah &middot; CEO, Niice Ventures</b>Co-founded, built, acquired, and scaled eight companies. Two-time EY Entrepreneur of the Year finalist.</p>
+  </div>
+  <nav class="more" aria-label="More">
+    <a href="https://www.linkedin.com/in/punits/">LinkedIn</a>
+    <a href="/">Niice Ventures</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap">Not financial or legal advice.<br>&copy; 2026 Niice Ventures &middot; <a href="/">niiceventures.com</a></div>
+</footer>
+
+<script>
+(function(){
+  var paths=['grow','buy','sell'];
+  function show(name){
+    if(paths.indexOf(name)<0) name='start';
+    document.querySelectorAll('.step').forEach(function(s){s.classList.toggle('on',s.id==='step-'+name)});
+    window.scrollTo(0,0);
+    var h=document.querySelector('#step-'+name+' h1'); if(h&&name!=='start'){h.setAttribute('tabindex','-1');h.focus({preventScroll:true});}
+  }
+  function route(){show(location.hash.replace('#',''))}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-go]');
+    if(b){var g=b.getAttribute('data-go');
+      (window.dataLayer=window.dataLayer||[]).push({event:'ig_funnel_choice',choice:g});
+      if(g==='start'){history.pushState(null,'',location.pathname+location.search);show('start');}
+      else{location.hash=g;}
+      return;}
+    var c=e.target.closest('[data-cta]');
+    if(c)(window.dataLayer=window.dataLayer||[]).push({event:'ig_funnel_cta',cta:c.getAttribute('data-cta')});
+  });
+  window.addEventListener('hashchange',route);
+  window.addEventListener('popstate',route);
+  route();
+})();
+</script>
+</body>
+</html>
